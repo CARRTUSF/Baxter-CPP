@@ -1,0 +1,6 @@
+/build/
+
+# NetBeans
+/nbproject/*
+/.dep.inc
+/Makefile
