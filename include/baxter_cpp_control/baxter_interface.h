@@ -37,7 +37,8 @@ public:
     //***************************
     //*** INFORMATION METHODS ***
     //***************************
-    sensor_msgs::JointStateConstPtr getJointStates(void);
+    bool isFirstStateReceived(void);
+    sensor_msgs::JointState getJointStates(void);
     
 private:
     //*********************
@@ -48,7 +49,7 @@ private:
     
     // Interface Status
     bool isInitialized;
-    
+
 private:
     //********************
     //*** ROS HANDLERS ***

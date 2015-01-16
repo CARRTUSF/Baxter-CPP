@@ -1,6 +1,8 @@
 /* 
  * File:   gripper_interface.h
- * Author: Andoni Aguirrezabal
+ * Author: andoni
+ *
+ * Created on January 9, 2015, 11:53 AM
  */
 
 #ifndef GRIPPER_INTERFACE_H

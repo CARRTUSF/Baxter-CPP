@@ -30,15 +30,22 @@ void BaxterInterface::jointStateCallback(const sensor_msgs::JointStateConstPtr& 
     if(msg->name.size() != BAXTER_TOTAL_JOINT_COUNT) {
         return;
     } else {
+        if(!firstStateReceived) {
+            firstStateReceived = true;
+        }
         lastJointState = *msg;
     }
 }
 
-sensor_msgs::JointStateConstPtr BaxterInterface::getJointStates(void) {
+bool BaxterInterface::isFirstStateReceived(void) { 
+    return firstStateReceived; 
+}
+
+sensor_msgs::JointState BaxterInterface::getJointStates(void) {
     if(firstStateReceived) {
-        return sensor_msgs::JointStateConstPtr(&lastJointState);
+        return lastJointState;
     } else {
-        return sensor_msgs::JointStateConstPtr();
+        return sensor_msgs::JointState();
     }
 }
 

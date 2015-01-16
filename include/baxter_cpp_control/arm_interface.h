@@ -6,7 +6,7 @@
 #ifndef ARM_INTERFACE_H
 #define ARM_INTERFACE_H
 
-// Baxter CPP Defines
+// Common Baxter Defines and Datatypes
 #include <baxter_cpp_control/baxter_defines.hpp>
 
 // ROS
