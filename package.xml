@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package>
+    <name>baxter_cpp_control</name>
+    <version>1.0.0</version>
+    <description>
+        Easy to use C++ Interface for controlling the arms
+        of the Baxter Research Robot from Rethink Robotics.
+    </description>
+
+    <maintainer email="aaguirrezaba@mail.usf.edu">
+        Andoni Aguirrezabal
+    </maintainer>
+
+    <author>Andoni Aguirrezabal</author>
+    <license>BSD</license>
+
+    <url type="website">
+        https://github.com/CARRTUSF/Baxter-CPP
+    </url>
+    <url type="repository">
+        https://github.com/CARRTUSF/Baxter-CPP
+    </url>
+    <url type="bugtracker">
+        https://github.com/CARRTUSF/Baxter-CPP/issues
+    </url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <build_depend>roscpp</build_depend>
+    <build_depend>sensor_msgs</build_depend>
+    <build_depend>baxter_core_msgs</build_depend>
+
+    <run_depend>roscpp</run_depend>
+    <run_depend>sensor_msgs</run_depend>
+    <run_depend>baxter_core_msgs</run_depend>
+</package>
