@@ -73,7 +73,7 @@ private:
     ros::Subscriber jointStateSubscriber;
     
     // Subscriber Callbacks
-    void baxterStateCallback(const baxter_core_msgs::AssemblyState& msg);
+    void baxterStateCallback(const baxter_core_msgs::AssemblyStateConstPtr& msg);
     void jointStateCallback(const sensor_msgs::JointStateConstPtr& msg);
     
     // Baxter Information Variables

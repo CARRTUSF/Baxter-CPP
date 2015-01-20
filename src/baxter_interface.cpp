@@ -34,7 +34,7 @@ bool BaxterInterface::init() {
     }
 }
 
-void BaxterInterface::baxterStateCallback(const baxter_core_msgs::AssemblyState& msg) {
+void BaxterInterface::baxterStateCallback(const baxter_core_msgs::AssemblyStateConstPtr& msg) {
     if(!firstBaxterStateReceived) {
         firstBaxterStateReceived = true;
     }
