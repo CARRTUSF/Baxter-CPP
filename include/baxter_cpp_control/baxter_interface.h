@@ -13,6 +13,9 @@
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
 
+// Baxter
+#include <baxter_core_msgs/AssemblyState.h>
+
 namespace baxter_cpp_control {
     
 class BaxterInterface {
@@ -32,14 +35,25 @@ public:
     //*****************************
     // Initialization
     bool init();
+
+public:
+    //***********************
+    //*** COMMAND METHODS ***
+    //***********************
+    
     
 public:
     //***************************
     //*** INFORMATION METHODS ***
     //***************************
-    bool isFirstStateReceived(void);
+    // Baxter States
+    bool isFirstBaxterStateReceived(void);
+    baxter_core_msgs::AssemblyState getBaxterSatate(void);
+
+    // Joint States
+    bool isFirstJointStateReceived(void);
     sensor_msgs::JointState getJointStates(void);
-    
+
 private:
     //*********************
     //*** CONFIGURATION ***
@@ -55,15 +69,20 @@ private:
     //*** ROS HANDLERS ***
     //********************
     // Subscribers
+    ros::Subscriber baxterStateSubscriber;
     ros::Subscriber jointStateSubscriber;
     
     // Subscriber Callbacks
+    void baxterStateCallback(const baxter_core_msgs::AssemblyState& msg);
     void jointStateCallback(const sensor_msgs::JointStateConstPtr& msg);
     
-    // Information Variables
-    bool firstStateReceived;
+    // Baxter Information Variables
+    bool firstBaxterStateReceived;
+    baxter_core_msgs::AssemblyState lastBaxterState;
+    
+    // Joint Information Variables
+    bool firstJointStateReceived;
     sensor_msgs::JointState lastJointState;
-
 };
     
 } // namespace

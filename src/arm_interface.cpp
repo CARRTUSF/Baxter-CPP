@@ -31,6 +31,9 @@ namespace baxter_cpp_control {
         return isInitialized;
     }
     
+    //************************
+    //*** POSITION CONTROL ***
+    //************************
     void BaxterArmInterface::setJointPosition(const jointPositionList& desiredJointPositions) {
         baxterJointMessage.mode = baxter_core_msgs::JointCommand::POSITION_MODE;
         baxterJointMessage.names.clear();
@@ -68,5 +71,6 @@ namespace baxter_cpp_control {
             return false;
         }
     }
+
 } // namespace
 

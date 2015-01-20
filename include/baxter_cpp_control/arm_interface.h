@@ -36,9 +36,12 @@ public:
     bool init();
 
 public:
-    //***********************
-    //*** COMMAND METHODS ***
-    //***********************
+    //************************
+    //*** POSITION CONTROL ***
+    //************************
+    // Set Joint Position
+    void moveToJointPosition(const jointPositionList& desiredJointPositions,
+                             bool isBlocking);
     void setJointPosition(const jointPositionList& desiredJointPositions);
     bool setJointPosition(const std::vector<double>& desiredJointPositions);
     

@@ -6,12 +6,13 @@
 #ifndef BAXTER_DEFINES_HPP
 #define	BAXTER_DEFINES_HPP
 
+// Baxter Information
+#define BAXTER_TOTAL_JOINT_COUNT 17
+#define BAXTER_LIMB_JOINT_COUNT 7
+
 // C++ and STL
 #include <string>
 #include <map>
-
-#define BAXTER_TOTAL_JOINT_COUNT 17
-#define BAXTER_LIMB_JOINT_COUNT 7
 
 namespace baxter_cpp_control {
     typedef std::map<std::string, double> jointPositionList; //Key Mapping
