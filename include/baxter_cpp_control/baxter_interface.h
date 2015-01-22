@@ -17,7 +17,8 @@
 #include <baxter_core_msgs/AssemblyState.h>
 
 namespace baxter_cpp_control {
-    
+
+/*! \brief Baxter Interface for Controlling Baxter and querying states */
 class BaxterInterface {
 public:
     //*********************
@@ -33,8 +34,12 @@ public:
     //*****************************
     //*** CONFIGURATION METHODS ***
     //*****************************
-    // Initialization
-    bool init();
+    /*! \brief Initialize the Baxter Interface
+     * 
+     * @return a BOOL representing if the initialization
+     * was successful
+     */
+    bool init(void);
 
 public:
     //***********************

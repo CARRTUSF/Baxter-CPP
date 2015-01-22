@@ -17,6 +17,7 @@
 
 namespace baxter_cpp_control {
 
+/*! \brief Baxter Interface for Controlling the Arm */
 class BaxterArmInterface {
 public:
     //*********************
@@ -32,8 +33,12 @@ public:
     //*****************************
     //*** CONFIGURATION METHODS ***
     //*****************************
-    // Initialization
-    bool init();
+    /*! \brief Initialize the Arm Interface
+     * 
+     * @return a BOOL representing if the initialization
+     * was successful
+     */
+    bool init(void);
 
 public:
     //************************
